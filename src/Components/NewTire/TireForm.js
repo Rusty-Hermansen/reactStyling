@@ -33,7 +33,7 @@ const TireForm = ({tire, editing, onSaveTireData}) => {
         <div className="form">
             <form onSubmit={submitHandler} action="#">
             <div>
-                <label>Picture URL</label>
+                <label style={{color: !editing ? 'red': 'blue'}}>Picture URL</label>
                 <input type="text" value={enteredTire.url} onChange={urlChangeHandler}/>
             </div>
             <div>

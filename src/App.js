@@ -91,7 +91,13 @@ function App() {
   return (
     <div className="App container">
       <TireFilter selected={filteredWheelSize} OnChangeFilter={filterChangeHandler}/>
-      {filteredWheelSize.map((t, index)=>{return(<TireItem tire={t} onTireSelect={()=>{selectTireHandler(index)}}/>)})}
+      <div className="d-flex justify-content-center">
+        <div className="flex-column">
+          {filteredWheelSize.map((t, index)=>{return(
+          <div onClick={()=>{selectTireHandler(index)}}>
+            <TireItem tire={t} onTireSelect={()=>{selectTireHandler(index)}}/></div>)})}
+            </div>
+            </div>
       {showing? <TireDetail editTire= {editTire} tire = {selectedTire} removeTire={removeTire}/>: <></>}
       {editing ? <NewTire editing={editing}  tire={selectedTire} onAddTire={onSaveHandler}/>: <button onClick={handleNewTire}>Add Tire</button>}
       
