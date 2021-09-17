@@ -1,9 +1,7 @@
 import TireItems from "./tireitem.module.css";
 
-const TireItem = ({ tire, onTireSelect }) => {
+const TireItem = ({ tire }) => {
     return (
-
-
         <div className={TireItems.tire_item} >
             <div className="row">
                 <img src={tire.url} alt="tire" width="300" height="150" />
@@ -18,9 +16,6 @@ const TireItem = ({ tire, onTireSelect }) => {
                     <p>{tire.model}</p>
                 </div>
             </div>
-
-
-
         </div>
     );
 

@@ -6,16 +6,11 @@ const TireDetail = ({tire, editTire, removeTire}) =>{
         tire.brand=event.target.value;
     };
 
-
-
     return(
        
             <div>
              <TireDetailView tire={tire} onChangeHandler={onChangeHandler} removeTire={removeTire} editTire={editTire}/>
-            </div>
-
-   
-       
+            </div>   
       
     )
 }
